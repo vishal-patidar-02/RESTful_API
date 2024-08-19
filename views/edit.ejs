@@ -1,0 +1,15 @@
+<%- include("includes/head.ejs") %>
+<body>
+    <div class="container">
+        <h1>Edit Your Post</h1>
+        <div id="edit-form" class="form-container">
+            <h3>@<%= post.username %></h3>
+            <p><%= post.id %></p>
+            <form method="post" action="http://localhost:8080/posts/<%= post.id %>?_method=PATCH">
+                <textarea name="caption" id="caption"><%= post.caption %></textarea>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

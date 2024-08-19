@@ -1,0 +1,28 @@
+<%- include("includes/head.ejs") %>
+<body>
+  <div class="header">
+     <h1>PostKar</h1>
+  </div>
+  <div class="main">
+    <% for(let post of posts) { %>
+    <div class="main-contain">
+      <img src="<%= post.url %>" alt="">
+      <h3>@<%= post.username %></h3>
+      <p><%= post.caption %> </p>
+      <a href="http://localhost:8080/posts/<%= post.id%>/edit">Edit</a>
+      <form method="post" action="http://localhost:8080/posts/<%= post.id%>?_method=DELETE">
+        <button>Delete</button>
+      </form>
+    </div>
+    <% } %>
+  </div>
+  <div class="fotter">
+    <form action="http://localhost:8080/posts/new">
+      <button>Create an post</button>
+    </form>
+  </div>
+    
+    
+    
+</body>
+</html>

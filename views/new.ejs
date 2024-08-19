@@ -1,0 +1,23 @@
+<%- include("includes/head.ejs") %>
+<body>
+    <div class="container">
+        <h1>PostKar</h1>
+        <div id="post-form">
+            <h2>Add a New POST</h2>
+            <form method="post" action="http://localhost:8080/posts" >
+                <label for="Username">Username</label>
+                <input type="text" id="Username" name="username" >
+                
+                <label for="url">Image URL</label>
+                <textarea id="url" name="url" ></textarea>
+                
+                <label for="caption">caption</label>
+                <textarea id="caption" name="caption" ></textarea>
+                
+                <button type="submit">Add Post</button>
+            </form>
+        </div>
+        <div id="recipe-list"></div>
+    </div>
+</body>
+</html>
