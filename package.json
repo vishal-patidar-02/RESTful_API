@@ -9,9 +9,11 @@
   "author": "vishal patidar",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "method-override": "^3.0.0",
+    "mysql2": "^3.11.0",
     "nodemon": "^3.1.4",
     "uuid": "^10.0.0"
   }
